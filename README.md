@@ -41,7 +41,7 @@ The server automatically looks for the OAuth public key at:
 Ensure this file exists, as it is used to verify JWT tokens from `rocks-api`.
 
 ## 3. Running the Server
-sdfsdf
+
 ### Development Mode
 Runs the server with `tsx` (reloads on file changes):
 ```bash
@@ -71,10 +71,14 @@ Add this to your `claude_desktop_config.json`:
 }
 ```
 
-### Custom Client (via SSE)
-The server runs an SSE transport on port 3001.
-- **SSE Endpoint**: `http://localhost:3001/sse`
-- **Post Message Endpoint**: `http://localhost:3001/message`
+### Generic MCP Client (SSE)
+The server also supports Server-Sent Events (SSE) for remote or web-based clients.
+
+- **SSE URL**: `http://localhost:3001/sse`
+- **Post Message URL**: `http://localhost:3001/message`
+
+You can use this with the [MCP Inspector](https://github.com/modelcontextprotocol/inspector) or other SSE-compatible clients.
+
 
 ## 5. Tools Reference
 
